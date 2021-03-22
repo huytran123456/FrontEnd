@@ -16,11 +16,8 @@
         <form class="border border-light p-5" >
 
             <p class="h4 mb-4 text-center"><strong>FORM</strong></p>
-            <input  type="text" id='Id' class="form-control mb-4" placeholder="ID" >
             <input  type="text" id='first_name' class="form-control mb-4" placeholder="FIRST NAME" >
             <input  type="text" id='last_name' class="form-control mb-4" placeholder="LAST NAME" >
-            <input  type="password" id='password' class="form-control mb-4" placeholder="PASSWORD" >
-            <input  type="text" id='email' class="form-control mb-4" placeholder="EMAIL" >
             <input  type="text" id='phone' class="form-control mb-4" placeholder="PHONE" >
             <button class="btn btn-dark-green btn-block my-4" style='background-color:green' id='update' type='click'>Update</button>
 
@@ -51,21 +48,21 @@
     //'X-CSRF-TOKEN' : document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
     'Content-Type': 'application/json',
 };
-   var first_name=document.getElementById('first_name').value
-        var last_name=document.getElementById('last_name').value
-        var email=document.getElementById('email').value
-        var phone=document.getElementById('phone').value
-        var password=document.getElementById('password').value
-        var id=document.getElementById('Id').value
+  //  var first_name=document.getElementById('first_name').value
+  //       var last_name=document.getElementById('last_name').value
+  //       var email=document.getElementById('email').value
+  //       var phone=document.getElementById('phone').value
+  //       var password=document.getElementById('password').value
+  //       var id=document.getElementById('Id').value
         async function Create(){
      event.preventDefault()
           // e.preventDefault()
      res= await axios.post('/api/users',{
      first_name:document.getElementById('first_name').value,
      last_name:document.getElementById('last_name').value,
-     email:document.getElementById('email').value,
+  //   email:document.getElementById('email').value,
      phone:document.getElementById('phone').value,
-     password:document.getElementById('password').value,
+  //   password:document.getElementById('password').value,
   //   _token: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
    }).then(response => {
                         if (response.status==200) {
