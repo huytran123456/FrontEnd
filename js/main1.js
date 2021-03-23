@@ -1,4 +1,5 @@
 let isMobileNav = false;
+
 function initPage() {
     t = document.querySelectorAll('.price-tag .amount');
     if (t) {
@@ -113,7 +114,7 @@ function getElementById(elementId) {
 
 function setupOrderButtonListener() {
     const orderButtonElementList = getOrderButtonElements()
-    orderButtonElementList.forEach( button =>  {
+    orderButtonElementList.forEach(button => {
         button.addEventListener('click', (e) => {
             e.stopPropagation();
             location.href = "#order-form";
@@ -125,15 +126,17 @@ function setupOrderButtonListener() {
 function getOrderButtonElements() {
     return document.querySelectorAll('button.order-button');
 }
+
 const header = getElementById('main-header');
 
 function toggleMobileNav() {
-    if(header.classList.contains('focus-nav')){
+    if (header.classList.contains('focus-nav')) {
         closeMobileNav();
-    }else{
+    } else {
         openMobileNav();
     }
 }
+
 function openMobileNav() {
     isMobileNav = true;
     header.classList.remove('focus-nav');
@@ -153,12 +156,12 @@ function myFuncti() {
     }
 }
 
-function registerNavigationEvents(){
+function registerNavigationEvents() {
     const nav = document.querySelectorAll('nav ul li a');
 
     const openButtonNav = document.querySelector('header .mobile-nav .toggle-nav');
 
-    nav.forEach(function(elm) {
+    nav.forEach(function (elm) {
         elm.addEventListener("click", toggleActiveClass);
     });
 
@@ -172,9 +175,9 @@ function registerNavigationEvents(){
         const scroll = document.documentElement.scrollTop;
         const nav = getElementById('main-header');
 
-        if(scroll > nav.scrollHeight){
+        if (scroll > nav.scrollHeight) {
             nav.classList.add('scrolled');
-        }else {
+        } else {
             nav.classList.remove('scrolled');
         }
 
@@ -183,7 +186,7 @@ function registerNavigationEvents(){
 }
 
 
-function toggleActiveClass(ev){
+function toggleActiveClass(ev) {
     ev.preventDefault();
 
     const item = ev.target.parentNode; // li
@@ -201,30 +204,30 @@ function toggleActiveClass(ev){
     // remove current
 
 
-    if(isMobileNav){
+    if (isMobileNav) {
         closeMobileNav();
     }
 
     const headingOffset = 80;
-   // window.scrollTo(0, target.offsetTop - headingOffset);
+    // window.scrollTo(0, target.offsetTop - headingOffset);
     window.location.href = ev.target.getAttribute("href");
 }
 
 class Classie {
     static has(elm, classString) {
-        if(elm == null)
+        if (elm == null)
             return
         return elm.classList.contains(classString);
     }
 
     static add(elm, classString) {
-        if(elm == null)
+        if (elm == null)
             return
         return elm.classList.add(classString);
     }
 
     static remove(elm, classString) {
-        if(elm == null)
+        if (elm == null)
             return
         return elm.classList.remove(classString);
     }
@@ -232,42 +235,46 @@ class Classie {
 
 EpSlider = 1;
 prevEpSlider = EpSlider;
-function nextEp(){
+
+function nextEp() {
     EpSlider += 1
-    if(EpSlider >= 4)
+    if (EpSlider >= 4)
         EpSlider = 1;
     getElementById("ep" + EpSlider).style.opacity = 1;
     getElementById("ep" + prevEpSlider).style.opacity = 0;
 
-    getElementById("episode-number").innerHTML  = "No. #" + EpSlider;
+    getElementById("episode-number").innerHTML = "No. #" + EpSlider;
 
     prevEpSlider = EpSlider;
 
 }
 
-function prevEp(){
+function prevEp() {
     prevSlide = slideCounter;
     slideCounter -= 1;
     moveSlide(1);
 }
+
 MIN_SlIDES = 1;
 MAX_SLIDES = 2;
-function next(){
+
+function next() {
     clearInterval(autoSlider);
     slideCounter += 1;
     prevSlide = slideCounter - 1;
     moveSlide();
 }
-function moveSlide(int){
+
+function moveSlide(int) {
 
 
-    if(prevSlide < MIN_SlIDES )
+    if (prevSlide < MIN_SlIDES)
         prevSlide = MAX_SLIDES;
 
-    if(slideCounter > MAX_SLIDES)
+    if (slideCounter > MAX_SLIDES)
         slideCounter = MIN_SlIDES;
 
-    if(slideCounter < MIN_SlIDES)
+    if (slideCounter < MIN_SlIDES)
         slideCounter = MAX_SLIDES;
 
     getElementById("slide" + prevSlide).style.opacity = 0;
@@ -320,12 +327,14 @@ function validateSubject() {
 function myFunction() {
     document.getElementById("myForm").reset();
 }
+
 function validateName() {
     var name = document.getElementsByName("name")[0].value;
     if (name.length <= 0)
         return "Name should be at least one characters!\n";
     return "";
 }
+
 function validateZipcode() {
     var zipp = valueOf("zipcode");
     regex = /^\d+$/;
@@ -357,4 +366,5 @@ function validateEmail() {
 function valueOf(name) {
     return document.getElementsByName(name)[0].value;
 }
+
 initPage();
