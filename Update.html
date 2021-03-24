@@ -94,7 +94,11 @@
                     } else {
                         console.log(response);
                     }
-                });
+                })
+                .catch(function (error) {
+                    console.log(error.response.data.errors);
+                    //   return
+                })
         })
     );
 </script>
