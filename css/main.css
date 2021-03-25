@@ -6,6 +6,7 @@
     --secundary-color: #57417a;
 
 }
+
 .mobile-nav {
     display: none;
 }
@@ -110,8 +111,8 @@ button {
 #main-header.scrolled {
     position: fixed;
     background-color: #0d0a12;
-    top:0;
-    width:100%;
+    top: 0;
+    width: 100%;
 }
 
 
@@ -133,7 +134,7 @@ header > nav > ul > li.brand {
     margin: 0;
 }
 
-header > nav > ul > li.brand >img {
+header > nav > ul > li.brand > img {
     width: 100%;
 }
 
@@ -150,7 +151,7 @@ header > nav > ul > li > a {
     padding: 20px;
 }
 
-header > nav > ul > li > a:before{
+header > nav > ul > li > a:before {
     content: '';
     height: 4px;
     width: 100%;
@@ -163,8 +164,8 @@ header > nav > ul > li > a:before{
 }
 
 
-header > nav > ul >li:hover > a{
-    color:#ff213c;
+header > nav > ul > li:hover > a {
+    color: #ff213c;
 }
 
 header > nav .active > a::before {
@@ -214,16 +215,15 @@ header > nav .active > a::before {
 }
 
 
-
 /* home */
 
 /* season */
-.season > h2, .season p{
+.season > h2, .season p {
     margin: 0.8em 0;
 }
 
 .season > h2,
-.season > h1{
+.season > h1 {
     font-size: 1.8em;
 }
 
@@ -240,6 +240,7 @@ header > nav .active > a::before {
     padding: 10px;
     z-index: 2;
 }
+
 .season > .episodes,
 .season > .episodes > .episode {
     transition: opacity 0.2s;
@@ -251,11 +252,12 @@ header > nav .active > a::before {
 }
 
 .season > .episodes > .yo {
-    width:1200px;
-    height:100%;
+    width: 1200px;
+    height: 100%;
     object-fit: fill;
     display: block;
 }
+
 .season > .episodes > .episode {
     position: absolute;
     height: 450px;
@@ -381,7 +383,7 @@ header > nav .active > a::before {
     font-size: 1.5em;
 }
 
-    /* shop */
+/* shop */
 #webshop > .shop {
     display: flex;
     flex-wrap: wrap;
@@ -465,8 +467,9 @@ header > nav .active > a::before {
     box-sizing: border-box;
     color: #000;
     position: relative;
-    overflow:scroll;
+    overflow: scroll;
 }
+
 .shop > .selected-shop-item > .content > .exit-button {
     position: absolute;
     right: 0px;
@@ -482,7 +485,8 @@ header > nav .active > a::before {
 .shop > .selected-shop-item > .content > figure {
     margin: 0 auto;
 }
-.shop > .selected-shop-item > .content > figure > img{
+
+.shop > .selected-shop-item > .content > figure > img {
     width: 350px;
 }
 
@@ -542,10 +546,11 @@ header > nav .active > a::before {
     border: 2px solid var(--secundary-color);
     box-sizing: border-box;
 }
+
 /* Contact */
 .contact-form {
     display: table;
-    margin:auto;
+    margin: auto;
 }
 
 .contact-form article ul {
@@ -577,30 +582,31 @@ header > nav .active > a::before {
     border: 2px solid var(--secundary-color);
     box-sizing: border-box;
 }
+
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Style inputs */
 input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
 }
 
 input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+    background-color: #45a049;
 }
 
 
@@ -610,21 +616,25 @@ footer {
     font-size: 0.8em;
     color: darkgray;
 }
-.container>.vid {
-  width: 100%  ;
-  height: 600px  ;
+
+.container > .vid {
+    width: 100%;
+    height: 600px;
 }
+
 .pagination a {
-  color: black;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: background-color .3s;
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
 }
 
 .pagination a.active {
-  background-color: dodgerblue;
-  color: white;
+    background-color: dodgerblue;
+    color: white;
 }
 
-.pagination a:hover:not(.active) {background-color: #ddd;}
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
