@@ -16,7 +16,6 @@
 <body>
 <a class="btn btn-primary" href="index.html" role="button">List</a>
 <a class="btn btn-primary" href="Create.html" role="button">Create</a>
-<a class="btn btn-primary" href="Login.html" role="button">Login</a>
 <div class="container-xl">
     <form class="border border-light p-5">
         <p class="h4 mb-4 text-center"><strong>FORM</strong></p>
@@ -76,7 +75,7 @@
             id = document.getElementById("Id").value;
             console.log(id)
             axios
-                .post("http://trandinhhuy.ete.com/api/users/" + id, {
+                .post("http://127.0.0.1:8000/api/users/" + id, {
                     first_name: document.getElementById("first_name").value,
                     last_name: document.getElementById("last_name").value,
                     phone: document.getElementById("phone").value,

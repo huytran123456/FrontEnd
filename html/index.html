@@ -13,9 +13,9 @@
 <body>
 <a class="btn btn-primary" href="Create.html" role="button">Create</a>
 <a class="btn btn-primary" href="Update.html" role="button">Update</a>
-<a class="btn btn-primary" href="Login.html" role="button">Login</a>
 <div class=container-xl>
     <p class="h4 mb-4 text-center"><strong>SEARCH ID</strong></p>
+    <input type="text" id='filter' class="form-control mb-4" placeholder=" SEARCH ID">
     <button class="btn btn-dark-green btn-block my-4" style='background-color:green' id='button_search'>Search</button>
     <table class="table">
         <thead>
@@ -64,7 +64,7 @@
 
     $(document).ready(
         $('#button_search').click(function () {
-            axios.get('http://trandinhhuy.ete.com/api/users')
+            axios.get('http://127.0.0.1:8000/api/users')
                 .then(function (response) {
                     console.log(response);
                     $('.table').DataTable({
